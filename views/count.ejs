@@ -1,0 +1,34 @@
+
+
+<!-- count.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Vote Counts</title>
+  <link rel="stylesheet" href="/styles/admin.css">
+</head>
+
+<body>
+  <header>
+    <h1>Vote Counts</h1>
+    <a href="/admin">Logout</a>
+  </header>
+
+  <main>
+    <section class="candidate-count">
+      <h2>Candidate Vote Counts</h2>
+      <ul class="candidates">
+        <% voteCounts.forEach(candidate => { %>
+          <li><%= candidate.name %> - Votes: <%= candidate.votes %></li>
+        <% }); %>
+      </ul>
+    </section>
+  </main>
+
+</body>
+
+</html>
+

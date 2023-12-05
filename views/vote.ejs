@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Voting Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    table {
+      margin: 20px auto;
+      border-collapse: collapse;
+      width: 50%;
+    }
+
+    th, td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: left;
+    }
+
+    th {
+      background-color: #f2f2f2;
+    }
+
+    td input[type='radio'] {
+      margin-right: 5px;
+    }
+
+    button {
+      display: block;
+      margin: 20px auto;
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    a {
+      display: block;
+      text-align: center;
+      margin-top: 20px;
+      text-decoration: none;
+      color: #333;
+    }
+
+    a:hover {
+      color: #000;
+    }
+  </style>
+</head>
+<body>
+  <h1>Welcome to the Voting Page</h1>
+  <form action="/vote" method="POST">
+    <table>
+      <tr>
+        <th>Candidate</th>
+        <th>Vote</th>
+      </tr>
+      <tr>
+        <td>Candidate 1</td>
+        <td><input type="radio" name="candidate" value="candidate1"></td>
+      </tr>
+      <tr>
+        <td>Candidate 2</td>
+        <td><input type="radio" name="candidate" value="candidate2"></td>
+      </tr>
+      <tr>
+        <td>Candidate 3</td>
+        <td><input type="radio" name="candidate" value="candidate3"></td>
+      </tr>
+      <tr>
+        <td>Candidate 4</td>
+        <td><input type="radio" name="candidate" value="candidate4"></td>
+      </tr>
+    
+    </table>
+    <button type="submit">Vote</button>
+  </form>
+  <a href="/logout">Logout</a>
+</body>
+</html>
